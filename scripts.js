@@ -33,22 +33,6 @@ console.log(User === sequelize.models.User); // true
 db.sync({
   force: true
 })
-  .then(() => {
-    const jane = User.bulkCreate([
-      {
-        firstName: "Priya",
-        lastName: "Murugan",
-        address: "Rjpm",
-        age: 22,
-      }, {
-        firstName: "Priya",
-        lastName: "Murugan",
-        address: "Rjpm",
-        age: 22,
-      },
-    ])
-  })
-  .catch((err) => console.log(err))
 const User1 = db.define('User1', {
   // Model attributes are defined here
   firstName: {
@@ -75,22 +59,6 @@ console.log(User1 === sequelize.models.User1); // true
 db.sync({
   force: true
 })
-  .then(() => {
-    const jane = User1.bulkCreate([
-      {
-        firstName: "deekshu",
-        lastName: "subramanian",
-        address: "Rjpm",
-        age: 22,
-      }, {
-        firstName: "geetha",
-        lastName: "priya",
-        address: "Rjpm",
-        age: 22,
-      },
-    ])
-  })
-  .catch((err) => console.log(err))
 
 
 // db.authenticate()

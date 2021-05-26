@@ -30,9 +30,6 @@ const User = db.define('User', {
 
 // `sequelize.define` also returns the model
 console.log(User === sequelize.models.User); // true
-db.sync({
-  force: true
-})
 const User1 = db.define('User1', {
   // Model attributes are defined here
   firstName: {
@@ -56,9 +53,6 @@ const User1 = db.define('User1', {
 
 // `sequelize.define` also returns the model
 console.log(User1 === sequelize.models.User1); // true
-db.sync({
-  force: true
-})
 
 
 // db.authenticate()
